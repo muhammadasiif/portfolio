@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-primary: #14b8a6;
+  --color-primary-dark: #0d9488;
+  --color-surface: #0a1111;
+  --color-surface-light: #131e1e;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-slate-100 font-sans antialiased;
+  }
+}
+
+.massive-text {
+  @apply text-[100px] md:text-[140px] leading-[0.78] tracking-[-0.05em] font-black uppercase;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  @apply rotate-180 text-[10px] tracking-[0.3em] uppercase text-gray-500;
+}
+
+.project-card {
+  @apply border border-white/5 bg-white/[0.02] transition-all duration-500;
+}
+
+.project-card:hover {
+  @apply border-primary/40 bg-primary/5;
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/[0.03] border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-500;
+}
