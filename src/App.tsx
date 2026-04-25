@@ -130,38 +130,49 @@ export default function App() {
           <FlaskConical size={800} strokeWidth={0.5} />
         </div>
 
-        <div className="max-w-7xl mx-auto w-full relative">
+        <div className="max-w-7xl mx-auto w-full relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="massive-text relative z-10 text-white"
+            className="massive-text text-white mb-10 md:mb-16 font-display select-none"
           >
-            <div className="flex items-baseline">
-              PROCESS<span className="text-primary ml-4">.</span>
-            </div>
-            <div className="flex items-baseline justify-end -mt-6 md:-mt-12">
-              DESIGN
+            <div className="flex flex-col">
+              <div className="flex items-baseline gap-2 md:gap-4">
+                <span className="text-primary drop-shadow-[0_0_30px_rgba(20,184,166,0.3)]">AI</span>
+                <span>DRIVEN</span>
+                <span className="text-primary/20 hidden sm:inline">-</span>
+              </div>
+              <div className="flex items-baseline md:justify-end -mt-1 md:-mt-8 overflow-hidden">
+                <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary via-white to-white/80 md:pr-4 inline-block transform hover:skew-x-[-10deg] transition-transform duration-700 cursor-default">
+                  CHEM·ENGINEER
+                </span>
+              </div>
             </div>
           </motion.div>
 
-          <div className="mt-20 md:mt-0 md:absolute md:top-1/2 md:left-0 w-full flex flex-col md:flex-row justify-between items-center pointer-events-none gap-10">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="hidden md:flex vertical-label h-48 items-center pr-12 text-teal-500 font-black"
+              transition={{ delay: 0.6 }}
+              className="hidden md:flex vertical-label h-32 items-center pr-12 text-teal-500 font-black border-r border-white/10"
             >
               Dawood University • BE Chemical 25-29
             </motion.div>
             
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="max-w-xl text-center md:text-right text-slate-400 text-sm md:text-base leading-relaxed pointer-events-auto bg-surface/80 backdrop-blur-sm p-6 md:p-0 rounded-xl"
+              className="max-w-2xl text-left text-slate-400 text-sm md:text-lg leading-relaxed bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-2xl backdrop-blur-xl pointer-events-auto"
             >
-              <p className="mb-6 italic text-primary font-bold tracking-widest uppercase text-xs">Summary</p>
-              I am a motivated Chemical Engineering student at Dawood University, with a strong foundation in core engineering principles. Passionate about sustainable solutions, process design, and industrial applications. Eager to apply theoretical knowledge to solve real-world engineering challenges.
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[2px] w-12 bg-primary" />
+                <p className="text-primary font-black tracking-[0.3em] uppercase text-xs">Professional Vision</p>
+              </div>
+              <p className="text-slate-200 font-medium leading-relaxed">
+                Transforming molecular principles into <span className="text-primary font-bold">industrial realities</span>. Currently pioneering my undergraduate studies in Chemical Engineering at Dawood University, I focus on the intersection of process safety, computational simulation, and sustainable engineering. Driven by a commitment to <span className="text-emerald-400">efficiency and innovation</span>, I aim to architect the next generation of chemical systems.
+              </p>
             </motion.div>
           </div>
         </div>
